@@ -15,7 +15,6 @@
     text-align: center;
     height: 320px;
     float: left;
-   background: greenyellow;
 }
 #doam{
     padding-top: 10px;
@@ -23,13 +22,11 @@
     text-align: center;
     height: 320px;
     float: left;
-   background: seagreen
 }
 #head{
     overflow: auto;
     text-align: center;
     height: 110px;
-    background-color: #F5F5F5;
     border-top-left-radius: 15px;
 border-top-right-radius: 15px;
 }
