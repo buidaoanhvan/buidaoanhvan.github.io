@@ -5,7 +5,7 @@
     margin-top: 30px;
     margin-left: auto;
     margin-right: auto;
-    background: black;
+    background-image: url("https://wallpaperplay.com/walls/full/f/b/b/86225.jpg");
     border-radius: 20px;
     border: 3px solid whitesmoke;
 }
@@ -13,14 +13,14 @@
     padding-top: 10px;
     width: 600px;
     text-align: center;
-    height: 320px;
+    height: 290px;
     float: left;
 }
 #doam{
     padding-top: 10px;
     width: 600px;
     text-align: center;
-    height: 320px;
+    height: 290px;
     float: left;
 }
 #head{
@@ -33,10 +33,9 @@ border-top-right-radius: 15px;
 #dieukien{
     padding-top: 10px;
     width: 1200px;
-    height: 230px;
+    height: 260px;
     text-align: center;
     float: left;
-   background: rebeccapurple;
    border-bottom-right-radius: 15px;
 border-bottom-left-radius: 15px;
 }
