@@ -27,12 +27,12 @@ $(document).ready(function () {
   $(".led").click(function(){
     var firebaseRef = firebase.database().ref().child("LED_STATUS");
 
-      if (LED_STATUS == 1){
-        firebaseRef.set(0);
-        LED_STATUS = 0;
+      if (LED_STATUS == "1"){
+        firebaseRef.set("0");
+        LED_STATUS == "0";
       }else{
-        firebaseRef.set(1);
-        LED_STATUS=1;
+        firebaseRef.set("1");
+        LED_STATUS="1";
       }
   })
 });
@@ -44,7 +44,7 @@ $(document).ready(function () {
   var FAN_STATUS;
   database.ref().on("value", function (snap) {
     FAN_STATUS = snap.val().FAN_STATUS;
-    if (FAN_STATUS == 1) {
+    if (FAN_STATUS == "1") {
       $(".quat").text("Bật Quạt");
     } else {
       $(".quat").text("Tắt Quạt");
@@ -54,12 +54,12 @@ $(document).ready(function () {
   $(".fan").click(function(){
     var firebaseRef = firebase.database().ref().child("FAN_STATUS");
 
-      if (FAN_STATUS == 1){
-        firebaseRef.set(0);
-        FAN_STATUS = 0;
+      if (FAN_STATUS == "1"){
+        firebaseRef.set("0");
+        FAN_STATUS = "0";
       }else{
-        firebaseRef.set(1);
-        FAN_STATUS=1;
+        firebaseRef.set("1");
+        FAN_STATUS="1";
       }
   })
 });
