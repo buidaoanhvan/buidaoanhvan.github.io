@@ -1,15 +1,83 @@
 body{
     text-align: center;
+    color: aliceblue;
+    font-family: verdana;
     background-color: darkslategrey;
 }
 
-.lightStatus{
-    margin-top: 40%;
-    color: white;
+.led{
+    border-radius: 30px;
+    width: 256px;
+    height: 256px;
+    background-image: url("bulb.png");
+    font-size: 20px;
     font-family: Verdana;
 }
-.lightButton{
-    font-size: 1.5em;
-    font-family: verdana;
-    padding: 10px;
+.fan{
+    border-radius: 20px;
+    width: 256px;
+    height: 256px;
+    color: white;
+    background-image: url("extractor.png");
+    font-size: 20px;
+    font-family: Verdana;
+}
+
+#main{
+    width: 1200px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+#divled{
+margin-top: 20px;
+-webkit-border-top-left-radius: 20px;
+-webkit-border-bottom-left-radius: 20px;
+-moz-border-radius-topleft: 20px;
+-moz-border-radius-bottomleft: 20px;
+border-top-left-radius: 20px;
+border-bottom-left-radius: 20px;
+    background-color: #01DF74;
+    width: 600px;
+    height: 360px;
+    float: left;
+}
+#divquat{
+    margin-top: 20px;
+-webkit-border-top-right-radius: 20px;
+-webkit-border-bottom-right-radius: 20px;
+-moz-border-radius-topright: 20px;
+-moz-border-radius-bottomright: 20px;
+border-top-right-radius: 20px;
+border-bottom-right-radius: 20px;
+    background-color: #01DF74;
+    width: 600px;
+    height: 360px;
+    float: left;
+}
+
+
+#divnhietdo{
+-webkit-border-top-left-radius: 20px;
+-webkit-border-bottom-left-radius: 20px;
+-moz-border-radius-topleft: 20px;
+-moz-border-radius-bottomleft: 20px;
+border-top-left-radius: 20px;
+border-bottom-left-radius: 20px;
+    background-color: #F78181;
+    width: 600px;
+    height: 360px;
+    float: left;
+}
+#divdoam{
+    -webkit-border-top-right-radius: 20px;
+-webkit-border-bottom-right-radius: 20px;
+-moz-border-radius-topright: 20px;
+-moz-border-radius-bottomright: 20px;
+border-top-right-radius: 20px;
+border-bottom-right-radius: 20px;
+    background-color: #F78181;
+    width: 600px;
+    height: 360px;
+    float: left;
 }

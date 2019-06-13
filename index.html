@@ -1,26 +1,39 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <title>DEMO</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-app.js"></script>
-    <script src="script.js"></script>
-    <link rel="stylesheet" href="style.css"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+  <script src="script.js"></script>
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-    <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
 
-  <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
-  <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-app.js"></script>
 
-  <!-- Add Firebase products that you want to use -->
-  <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-auth.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-firestore.js"></script>
-    <h1 class="lightStatus">Hello</h1>
-    <button class="lightButton">Click !!!!</button>
+
+  <div id="main">
+
+    <div id="divnhietdo">
+      <h1>Nhiệt Độ</h1>
+    </div>
+    <div id="divdoam">
+        <h1>Độ Ẩm</h1>
+    </div>
+
+    <div id="divled">
+      <h1 class="den">Tải Trạng Thái....!!!</h1>
+      <button class="led"></button>
+    </div>
+    <div id="divquat">
+      <h1 class="quat">Tải Trạng Thái....!!!</h1>
+      <button class="fan"></button>
+    </div>
+  </div>
 </body>
 
 </html>
