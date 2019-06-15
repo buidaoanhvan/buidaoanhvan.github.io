@@ -1,46 +1,33 @@
 body{
     text-align: center;
-    color: aliceblue;
+    color: #EEEEEE;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background-color: Teal;
+    background-color: rgb(207, 207, 207);
 }
-
-
-
-#container {
-    margin: 20px;
-    width: 200px;
-    height: 100px;
-  }
-  #container2 {
-    margin: 20px;
-    width: 200px;
-    height: 100px;
-  }
-
-
-
-
 .led{
-    border-radius: 30px;
-    width: 256px;
-    height: 256px;
-    background-image: url("bulb.png");
-    font-size: 20px;
+    border-radius: 45px;
+    width: 66px;
+    height: 66px;
+    background-image: url("lamp.png");
+    font-size: 8px;
+    border-color: #fff;
+    border-width: 1px;
     font-family: Verdana;
 }
 .fan{
-    border-radius: 20px;
-    width: 256px;
-    height: 256px;
+    border-radius: 45px;
+    width: 66px;
+    height: 66px;
     color: white;
-    background-image: url("extractor.png");
-    font-size: 20px;
+    background-image: url("sdsdsdsd.png");
+    font-size: 8px;
+    border-color: #fff;
+    border-width: 1px;
     font-family: Verdana;
 }
 
 #main{
-    width: 1200px;
+    width: 800px;
     height: auto;
     margin-left: auto;
     margin-right: auto;
@@ -53,9 +40,9 @@ margin-top: 20px;
 -moz-border-radius-bottomleft: 20px;
 border-top-left-radius: 20px;
 border-bottom-left-radius: 20px;
-    background-color: #01DF74;
-    width: 600px;
-    height: 360px;
+    background-color: #01DF85;
+    width: 400px;
+    height: 170px;
     float: left;
 }
 #divquat{
@@ -66,11 +53,13 @@ border-bottom-left-radius: 20px;
 -moz-border-radius-bottomright: 20px;
 border-top-right-radius: 20px;
 border-bottom-right-radius: 20px;
-    background-color: #01DF74;
-    width: 600px;
-    height: 360px;
+    background-color: #01DF85;
+    width: 400px;
+    height: 170px;
     float: left;
 }
+
+
 
 
 #divnhietdo{
@@ -80,9 +69,9 @@ border-bottom-right-radius: 20px;
 -moz-border-radius-bottomleft: 20px;
 border-top-left-radius: 20px;
 border-bottom-left-radius: 20px;
-    background-color: #F78181;
-    width: 600px;
-    height: 360px;
+    background-color: #F8F8FF;
+    width: 400px;
+    height: 310px;
     float: left;
 }
 #divdoam{
@@ -92,9 +81,9 @@ border-bottom-left-radius: 20px;
 -moz-border-radius-bottomright: 20px;
 border-top-right-radius: 20px;
 border-bottom-right-radius: 20px;
-    background-color: #F78181;
-    width: 600px;
-    height: 360px;
+    background-color: #F8F8FF;
+    width: 400px;
+    height: 310px;
     float: left;
 }
 
@@ -112,7 +101,7 @@ border-bottom-right-radius: 20px;
     position: relative;
     }
     .progress-pie-chart.gt-50 {
-    background-color: #81CE97;
+    background-color: rgb(243, 48, 22);
     }
     
     .ppc-progress {
@@ -134,7 +123,7 @@ border-bottom-right-radius: 20px;
     width: 200px;
     height: 200px;
     clip: rect(0, 100px, 200px, 0);
-    background: #81CE97;
+    background: rgb(219, 84, 60);
     transform: rotate(60deg);
     }
     .gt-50 .ppc-progress {
@@ -161,7 +150,7 @@ border-bottom-right-radius: 20px;
     display: block;
     font-size: 2.6em;
     font-weight: bold;
-    color: #81CE97;
+    color: rgb(219, 84, 60);
     }
     
     .pcc-percents-wrapper {
@@ -170,13 +159,11 @@ border-bottom-right-radius: 20px;
     }
     
     .progress-pie-chart {
-    margin: 50px auto 0;
+    margin: 10px auto 0;
     }
 
 
-
-
-
+  
     .progress-pie-chart2 {
         width:200px;
         height: 200px;
@@ -185,7 +172,7 @@ border-bottom-right-radius: 20px;
         position: relative;
         }
         .progress-pie-chart2.gt-50 {
-        background-color: #81CE97;
+        background-color: rgb(71, 156, 224);
         }
         
         .ppc-progress2 {
@@ -207,7 +194,7 @@ border-bottom-right-radius: 20px;
         width: 200px;
         height: 200px;
         clip: rect(0, 100px, 200px, 0);
-        background: #81CE97;
+        background: rgb(71, 156, 224);
         transform: rotate(60deg);
         }
         .gt-50 .ppc-progress2 {
@@ -234,7 +221,7 @@ border-bottom-right-radius: 20px;
         display: block;
         font-size: 2.6em;
         font-weight: bold;
-        color: #81CE97;
+        color: rgb(71, 156, 224);
         }
         
         .pcc-percents-wrapper2 {
@@ -243,7 +230,7 @@ border-bottom-right-radius: 20px;
         }
         
         .progress-pie-chart2 {
-        margin: 50px auto 0;
+        margin: 10px auto 0;
         }
 
 
