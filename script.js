@@ -24,16 +24,16 @@ $(document).ready(function () {
     }
   });
 
-  $(".led").click(function(){
+  $(".led").click(function () {
     var firebaseRef = firebase.database().ref().child("LED_STATUS");
 
-      if (LED_STATUS == "1"){
-        firebaseRef.set("0");
-        LED_STATUS == "0";
-      }else{
-        firebaseRef.set("1");
-        LED_STATUS="1";
-      }
+    if (LED_STATUS == "1") {
+      firebaseRef.set("0");
+      LED_STATUS == "0";
+    } else {
+      firebaseRef.set("1");
+      LED_STATUS = "1";
+    }
   })
 });
 //=============led========================
@@ -51,16 +51,70 @@ $(document).ready(function () {
     }
   });
 
-  $(".fan").click(function(){
+  $(".fan").click(function () {
     var firebaseRef = firebase.database().ref().child("FAN_STATUS");
 
-      if (FAN_STATUS == "1"){
-        firebaseRef.set("0");
-        FAN_STATUS = "0";
-      }else{
-        firebaseRef.set("1");
-        FAN_STATUS="1";
-      }
+    if (FAN_STATUS == "1") {
+      firebaseRef.set("0");
+      FAN_STATUS = "0";
+    } else {
+      firebaseRef.set("1");
+      FAN_STATUS = "1";
+    }
   })
 });
 //=============Fan========================
+
+
+//================== Nhiet Do ==============================
+$(document).ready(function () {
+
+  var database = firebase.database();
+  var NHIET_DO;
+  database.ref().on("value", function (snap) {
+    NHIET_DO = snap.val().NHIET_DO;
+    var progressbar = $('#progress_bar');
+    value = progressbar.val();
+    value = Number(NHIET_DO);
+
+    addValue = progressbar.val(value);
+    $('.progress-value').html(value + '%');
+    var $ppc = $('.progress-pie-chart'),
+      deg = 360 * value / 100;
+    if (value > 50) {
+      $ppc.addClass('gt-50');
+    }
+    $('.ppc-progress-fill').css('transform', 'rotate(' + deg + 'deg)');
+    $('.ppc-percents .nhietdo2').html(value + '°C');
+
+    if (value == max) {
+      clearInterval(animate);
+    }
+  });
+});
+
+
+//================== Do Am ==============================
+$(document).ready(function () {
+  var database = firebase.database();
+  var DO_AM;
+  database.ref().on("value", function (snap) {
+    DO_AM = snap.val().DO_AM;
+    var progressbar2 = $('#progress_bar2');
+    value2 = progressbar2.val();
+    value2 = Number(DO_AM);
+    addValue2 = progressbar2.val(value2);
+    $('.progress-value2').html(value2 + '%');
+    var $ppc2 = $('.progress-pie-chart2'),
+      deg2 = 360 * value2 / 100;
+    if (value2 > 50) {
+      $ppc2.addClass('gt-50');
+    }
+    $('.ppc-progress-fill2').css('transform', 'rotate(' + deg2 + 'deg)');
+    $('.ppc-percents2 .doam2').html(value2 + '%');
+
+    if (value2 == max2) {
+      clearInterval(animate);
+    }
+  });
+});
