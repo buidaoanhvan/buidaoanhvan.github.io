@@ -19,12 +19,14 @@ $(document).ready(function () {
     LED_STATUS = snap.val().LED_STATUS;
     if (LED_STATUS == 1) {
       $(".den").text("Bật Đèn");
+      $('input[name=foo1]').attr('checked', true);
     } else {
       $(".den").text("Tắt Đèn");
+      $('input[name=foo1]').attr('checked', false);
     }
   });
 
-  $(".led").click(function () {
+  $(".bt1").click(function () {
     var firebaseRef = firebase.database().ref().child("LED_STATUS");
 
     if (LED_STATUS == "1") {
@@ -46,12 +48,17 @@ $(document).ready(function () {
     FAN_STATUS = snap.val().FAN_STATUS;
     if (FAN_STATUS == "1") {
       $(".quat").text("Bật Quạt");
+      $('input[name=foo]').attr('checked', true);
     } else {
       $(".quat").text("Tắt Quạt");
+      $('input[name=foo]').attr('checked', false);
     }
+
+
   });
 
-  $(".fan").click(function () {
+
+  $(".bt").click(function () {
     var firebaseRef = firebase.database().ref().child("FAN_STATUS");
 
     if (FAN_STATUS == "1") {
