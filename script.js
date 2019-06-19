@@ -125,3 +125,13 @@ $(document).ready(function () {
     }
   });
 });
+//============muc nuoc====================
+$(document).ready(function () {
+  var MUC_NUOC;
+  var database = firebase.database();
+  database.ref().on("value", function (elem) {
+    MUC_NUOC = elem.val().MUC_NUOC;
+    $("#chumucnuoc").text(MUC_NUOC + "%");
+    document.getElementById('myBar3').style.height = MUC_NUOC+'%';
+ });
+});

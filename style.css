@@ -59,14 +59,25 @@ border-bottom-right-radius: 20px;
     float: left;
 }
 
+#mucnuoc{
+  margin-top: 20px;
+    border-radius: 20px;
+    background-color: #01DF85;
+    width: 170px;
+    height: 600px;
+    float: left;
+}
 
 
-
-
-
-
-
-
+#bieudo.{
+  margin-top: 20px;
+    border-radius: 20px;
+    background-color: #01DF85;
+    width: 610px;
+    height: 600px;
+    margin-left: 20px;
+    float: left;
+}
 
 #divnhietdo{
 -webkit-border-top-left-radius: 20px;
@@ -301,6 +312,35 @@ border-bottom-right-radius: 20px;
         
         .progress-pie-chart2 {
         margin: 10px auto 0;
+        }
+
+        #myProgress3 {
+          transform: rotate(180deg);
+         margin-left: 45px; 
+         margin-top: 25px;
+         border-radius: 20px;
+          height: 100%;
+          width: 80px;
+          background-color:#F8F8FF;
+        }
+        
+        #myBar3 {
+          height: 50%;
+          border-radius: 20px;
+          width: 80px;
+          background-color:#40A6FA;
+        }
+
+        #mucnuoctrong{
+          margin-left: 1px; 
+         margin-top: 25px;
+          height: 550px;
+          width: 80px;
+        }
+        #chumucnuoc{
+          transform: rotate(180deg);
+          font-size: 30px; 
+          padding-bottom: 40px;
         }
 
 
