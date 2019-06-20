@@ -4,8 +4,8 @@
 #include <DHT.h>
 #define FIREBASE_HOST "fir-b3df2.firebaseio.com"                         // the project name address from firebase id
 #define FIREBASE_AUTH "EWd6TFVXo1CbyTLJOb7YlDArRFbuNSwEuxqP7yxq"                    // the secret key generated from firebase
-#define WIFI_SSID "SKAV2"                                          // input your home or public wifi name 
-#define WIFI_PASSWORD "buidaoanhvan13101997"                                    //password of wifi ssid
+#define WIFI_SSID "Fpoly-Students"                                          // input your home or public wifi name 
+#define WIFI_PASSWORD "fpolyhcm@123"                                    //password of wifi ssid
 #define DHTPIN 14    // Chân dữ liệu của DHT 11 , với NodeMCU chân D5 GPIO là 14
 #define DHTTYPE DHT11   // DHT 11
 DHT dht(DHTPIN, DHTTYPE);
@@ -40,6 +40,16 @@ void setup() {
 }
 
 void loop() {
+
+
+  int sensor=analogRead(A0); // Incoming analog signal read and appointed sensor
+  int mucnuoc;
+  int muocnuoc2;
+  mucnuoc = map(sensor,0,1023,0,4000);
+  muocnuoc2 = map(mucnuoc,0,4000,0,100);
+  Serial.println(muocnuoc2);
+  Firebase.setFloat ("MUC_NUOC", muocnuoc2);
+
 
   float h = dht.readHumidity();
   float t = dht.readTemperature();  // Đọc nhiệt độ theo độ C
