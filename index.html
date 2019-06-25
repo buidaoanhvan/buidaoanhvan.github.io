@@ -10,12 +10,48 @@
   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
   <script src="https://www.gstatic.com/charts/loader.js"></script>
   <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
   <script src="script.js"></script>
   <script src="Chart.min.js"></script>
   <link rel="stylesheet" href="style.css" />
+  <script type="text/javascript">
+    $(document).ready(function () {
+      // Tao 2 mang chua ten ngay thang
+      var monthNames = ["Tháng 1", "Tháng 2", "Tháng 3", "Tháng 4", "Tháng 5", "Tháng 6", "Tháng 7", "Tháng 8", "Tháng 9", "Tháng 10", "Tháng 11", "Tháng 12"];
+      var dayNames = ["Chủ Nhật", "Thứ Hai", "Thứ Ba", "Thứ Tư", "Thứ Năm", "Thứ Sáu", "Thứ Bảy"]
+
+      // Tao moi doi tuong Date()
+      var newDate = new Date();
+      // Lay gia tri thoi gian hien tai
+      newDate.setDate(newDate.getDate());
+      // Xuat ngay thang, nam
+      $('#Date').html(dayNames[newDate.getDay()] + " / " + newDate.getDate() + ' / ' + monthNames[newDate.getMonth()] + ' / ' + newDate.getFullYear());
+
+      setInterval(function () {
+        // lay gia tri giay trong doi tuong Date()
+        var seconds = new Date().getSeconds();
+        // Chen so 0 vao dang truoc gia tri giay
+        $("#sec").html((seconds < 10 ? "0" : "") + seconds);
+      }, 1000);
+
+      setInterval(function () {
+        // Tuong tu lay gia tri phut
+        var minutes = new Date().getMinutes();
+        // Chen so 0 vao dang truoc gia tri phut neu gia tri hien tai nho hon 10
+        $("#min").html((minutes < 10 ? "0" : "") + minutes);
+      }, 1000);
+
+      setInterval(function () {
+        // Lay gia tri gio hien tai
+        var hours = new Date().getHours();
+        // Chen so 0 vao truoc gia tri gio neu gia tri nho hon 10
+        $("#hours").html((hours < 10 ? "0" : "") + hours);
+      }, 1000);
+    });
+  </script>
 </head>
 
-<body>
+<body onload="time()">
 
   <div id="main">
     <div id="divnhietdo">
@@ -71,22 +107,52 @@
         <span class="slider round"></span>
       </label>
     </div>
-    
+
     <div id="mucnuoc">
       <div id="mucnuoctrong">
-          <div id="myProgress3">
-              <div id="myBar3"><h4 id="chumucnuoc"></h4></div>
-              
-            </div>
-           
+        <div id="myProgress3">
+          <div id="myBar3">
+            <h4 id="chumucnuoc"></h4>
+          </div>
+
+        </div>
+
       </div>
       <h2>Mực Nước</h2>
     </div>
     <div id="bieudo">
-      
+      <div id="Date"></div>
+      <ul>
+        <li id="hours"></li>
+        <li id="point">:</li>
+        <li id="min"></li>
+        <li id="point">:</li>
+        <li id="sec"></li>
+      </ul>
+
+      <div id="divled2">
+        <h1 class="den2" style="color: ghostwhite">Tải Trạng Thái....!!!</h1>
+        <!-- Rounded switch -->
+        <label class="switch">
+          <input class="bt2" name="foo2" type="checkbox">
+          <span class="slider round"></span>
+        </label>
       </div>
-    
+      <div id="divquat2">
+        <h1 class="quat3" style="color: ghostwhite">Tải Trạng Thái....!!!</h1>
+        <!-- Rounded switch -->
+        <label class="switch">
+          <input class="bt3" name="foo3" type="checkbox">
+          <span class="slider round"></span>
+        </label>
+      </div>
+    </div>
   </div>
+  </div>
+
+  </div>
+
+
 </body>
 
 </html>

@@ -18,10 +18,10 @@ $(document).ready(function () {
   database.ref().on("value", function (snap) {
     LED_STATUS = snap.val().LED_STATUS;
     if (LED_STATUS == 1) {
-      $(".den").text("Bật Đèn");
+      $(".den").text("Đèn Khách Bật");
       $('input[name=foo1]').attr('checked', true);
     } else {
-      $(".den").text("Tắt Đèn");
+      $(".den").text("Đèn Khách Tắt");
       $('input[name=foo1]').attr('checked', false);
     }
   });
@@ -71,6 +71,69 @@ $(document).ready(function () {
   })
 });
 //=============Fan========================
+
+
+
+//=============led2========================
+$(document).ready(function () {
+  var database = firebase.database();
+  var LED_NGU;
+  database.ref().on("value", function (snap) {
+    LED_NGU = snap.val().LED_NGU;
+    if (LED_NGU == 1) {
+      $(".den2").text("Đèn Ngủ Bật");
+      $('input[name=foo2]').attr('checked', true);
+    } else {
+      $(".den2").text("Đèn Ngủ Tắt");
+      $('input[name=foo2]').attr('checked', false);
+    }
+  });
+
+  $(".bt2").click(function () {
+    var firebaseRef = firebase.database().ref().child("LED_NGU");
+
+    if (LED_NGU == "1") {
+      firebaseRef.set("0");
+      LED_NGU == "0";
+    } else {
+      firebaseRef.set("1");
+      LED_NGU = "1";
+    }
+  })
+});
+//=============led2========================
+
+//=============Fan2========================
+$(document).ready(function () {
+  var database = firebase.database();
+  var FAN_TOLET;
+  database.ref().on("value", function (snap) {
+    FAN_TOLET = snap.val().FAN_TOLET;
+    if (FAN_TOLET == "1") {
+      $(".quat3").text("Đèn Tắm Bật");
+      $('input[name=foo3]').attr('checked', true);
+    } else {
+      $(".quat3").text("Đèn Tắm Tắt");
+      $('input[name=foo3]').attr('checked', false);
+    }
+
+
+  });
+
+
+  $(".bt3").click(function () {
+    var firebaseRef = firebase.database().ref().child("FAN_TOLET");
+
+    if (FAN_TOLET == "1") {
+      firebaseRef.set("0");
+      FAN_TOLET = "0";
+    } else {
+      firebaseRef.set("1");
+      FAN_TOLET = "1";
+    }
+  })
+});
+//=============Fan2========================
 
 
 //================== Nhiet Do ==============================
@@ -135,3 +198,4 @@ $(document).ready(function () {
     document.getElementById('myBar3').style.height = MUC_NUOC+'%';
  });
 });
+

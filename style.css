@@ -59,6 +59,33 @@ border-bottom-right-radius: 20px;
     float: left;
 }
 
+#divled2{
+  margin-top: 70px;
+  -webkit-border-top-left-radius: 20px;
+  -webkit-border-bottom-left-radius: 20px;
+  -moz-border-radius-topleft: 20px;
+  -moz-border-radius-bottomleft: 20px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+      background-color: #FAAC58;
+      width: 305px;
+      height: 170px;
+      float: left;
+  }
+  #divquat2{
+      margin-top: 70px;
+  -webkit-border-top-right-radius: 20px;
+  -webkit-border-bottom-right-radius: 20px;
+  -moz-border-radius-topright: 20px;
+  -moz-border-radius-bottomright: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+      background-color: #FAAC58;
+      width: 305px;
+      height: 170px;
+      float: left;
+  }
+
 #mucnuoc{
   margin-top: 20px;
     border-radius: 20px;
@@ -103,7 +130,76 @@ border-bottom-right-radius: 20px;
     height: 310px;
     float: left;
 }
+ .date{
+  font-size: 40px
+ }
+ .clock {
+  margin: 0 auto;
+  padding: 30px;
+  color: #fff;
+}
 
+#Date {
+  margin-top: 130px;
+  font-family: 'BebasNeueRegular', Arial, Helvetica, sans-serif;
+  font-size: 36px;
+  text-align: center;
+}
+
+ul {
+  width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  list-style: none;
+  text-align: center;
+}
+
+ul li {
+  display: inline;
+  font-size: 5em;
+  text-align: center;
+  font-family: 'BebasNeueRegular', Arial, Helvetica, sans-serif;
+}
+
+#point {
+  position: relative;
+  -moz-animation: mymove 1s ease infinite;
+  -webkit-animation: mymove 1s ease infinite;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+@-webkit-keyframes mymove {
+  0% {opacity: 1.0;
+  text-shadow: 0 0 20px #00c6ff;
+}
+
+50% {
+  opacity: 0;
+  text-shadow: none;
+}
+
+100% {
+  opacity: 1.0;
+  text-shadow: 0 0 20px #00c6ff;
+}
+}
+
+@-moz-keyframes mymove {
+  0% {
+      opacity: 1.0;
+      text-shadow: 0 0 20px #00c6ff;
+  }
+
+  50% {
+      opacity: 0;
+      text-shadow: none;
+  }
+
+  100% {
+      opacity: 1.0;
+      text-shadow: 0 0 20px #00c6ff;
+  };
+}
 
 
 /*===================================================*/

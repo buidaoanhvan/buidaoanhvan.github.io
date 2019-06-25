@@ -4,8 +4,8 @@
 #include <DHT.h>
 #define FIREBASE_HOST "fir-b3df2.firebaseio.com"                         // the project name address from firebase id
 #define FIREBASE_AUTH "EWd6TFVXo1CbyTLJOb7YlDArRFbuNSwEuxqP7yxq"                    // the secret key generated from firebase
-#define WIFI_SSID "Fpoly-Students"                                          // input your home or public wifi name 
-#define WIFI_PASSWORD "fpolyhcm@123"                                    //password of wifi ssid
+#define WIFI_SSID "SKAV2"                                          // input your home or public wifi name 
+#define WIFI_PASSWORD "buidaoanhvan13101997"                                    //password of wifi ssid
 #define DHTPIN 14    // Chân dữ liệu của DHT 11 , với NodeMCU chân D5 GPIO là 14
 #define DHTTYPE DHT11   // DHT 11
 DHT dht(DHTPIN, DHTTYPE);
@@ -14,12 +14,16 @@ String fireStatus = "";                                                     // l
 String fanStatus = "";
 int led = D3;                                                                // for external led
 int fan = D2;
+int led1 = D0;                                                                // for external led
+int fan1 = D4;
 void setup() {
   Serial.begin(9600);
   delay(1000);
   pinMode(LED_BUILTIN, OUTPUT);
   pinMode(led, OUTPUT);
   pinMode(fan, OUTPUT);
+  pinMode(led1, OUTPUT);
+  pinMode(fan1, OUTPUT);
 
   WiFi.begin(WIFI_SSID, WIFI_PASSWORD);                                      //try to connect with wifi
   Serial.print("Connecting to ");
@@ -35,8 +39,6 @@ void setup() {
   Serial.println(WiFi.localIP()); //print local IP address
   dht.begin();
   Firebase.begin(FIREBASE_HOST, FIREBASE_AUTH);                                       // connect to firebase
-  Firebase.setString("LED_STATUS", "OFF");                                          //send initial string of led status
-  Firebase.setString("FAN_STATUS", "OFF");
 }
 
 void loop() {
@@ -96,4 +98,35 @@ void loop() {
     Serial.println("Wrong Credential! Please send ON/OFF");
     //========================================================
   }
+
+   //==========led============================================
+  fireStatus = Firebase.getString("LED_NGU");                                      // get ld status input from firebase
+  if (fireStatus == "1") {                                                          // compare the input of led status received from firebase
+    Serial.println("Led Turned ON");                                                                          // make bultin led ON
+    digitalWrite(led1, HIGH);                                                         // make external led ON
+  }
+  else if (fireStatus == "0") {                                                  // compare the input of led status received from firebase
+    Serial.println("Led Turned OFF");                                      // make bultin led OFF
+    digitalWrite(led1, LOW);                                                         // make external led OFF
+  }
+  else {
+    Serial.println("Wrong Credential! Please send ON/OFF");
+  }
+  //========================================================
+
+  //==========fan============================================
+  fanStatus = Firebase.getString("FAN_TOLET");                                      // get ld status input from firebase
+  if (fanStatus == "1") {                                                          // compare the input of led status received from firebase
+    Serial.println("Fan Turned ON");                                                                           // make bultin led ON
+    digitalWrite(fan1, HIGH);                                                         // make external led ON
+  }
+  else if (fanStatus == "0") {                                                  // compare the input of led status received from firebase
+    Serial.println("Led Turned OFF");
+    digitalWrite(fan1, LOW);                                                         // make external led OFF
+  }
+  else {
+    Serial.println("Wrong Credential! Please send ON/OFF");
+    //========================================================
+  }
+
 }
