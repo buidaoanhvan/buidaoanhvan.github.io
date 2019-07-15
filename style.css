@@ -329,6 +329,13 @@ ul li {
     font-weight: bold;
     color: rgb(219, 84, 60);
     }
+
+    .nhietdo3 {
+      display: block;
+      font-size: 1.6em;
+      font-weight: bold;
+      color: rgb(219, 84, 60);
+      }
     
     .pcc-percents-wrapper {
     display: table-cell;

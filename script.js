@@ -148,14 +148,14 @@ $(document).ready(function () {
     value = Number(NHIET_DO);
 
     addValue = progressbar.val(value);
-    $('.progress-value').html(value + 'kPa');
+    $('.progress-value').html(value);
     var $ppc = $('.progress-pie-chart'),
       deg = 360 * value / 100;
     if (value > 50) {
       $ppc.addClass('gt-50');
     }
     $('.ppc-progress-fill').css('transform', 'rotate(' + deg + 'deg)');
-    $('.ppc-percents .nhietdo2').html(value + 'kPa');
+    $('.ppc-percents .nhietdo2').html(value );
 
     if (value == max) {
       clearInterval(animate);
