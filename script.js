@@ -148,7 +148,7 @@ $(document).ready(function () {
     value = Number(NHIET_DO);
 
     addValue = progressbar.val(value);
-    $('.progress-value').html(value + '%');
+    $('.progress-value').html(value + 'kPa');
     var $ppc = $('.progress-pie-chart'),
       deg = 360 * value / 100;
     if (value > 50) {
