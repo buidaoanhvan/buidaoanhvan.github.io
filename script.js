@@ -155,7 +155,7 @@ $(document).ready(function () {
       $ppc.addClass('gt-50');
     }
     $('.ppc-progress-fill').css('transform', 'rotate(' + deg + 'deg)');
-    $('.ppc-percents .nhietdo2').html(value + '°C');
+    $('.ppc-percents .nhietdo2').html(value + 'kPa');
 
     if (value == max) {
       clearInterval(animate);
